@@ -11,12 +11,14 @@ const Posts = () => {
     const currentUser = JSON.parse(localStorage.getItem('profile'));
     const posts = useSelector((state) => state.posts);
 
-    posts.forEach(post => {
+    if(currentUser != null) {
+       posts.forEach(post => {
         if(post.user == currentUser.result.name) {
             isBooked = true;
         }
-    });
-    //const classes = useStyles();
+    }); 
+    }
+    
     return(
     
             <Grid container alignItems="stretch" spacing={3}>

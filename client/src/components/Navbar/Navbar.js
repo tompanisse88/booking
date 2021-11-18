@@ -3,8 +3,10 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 
 import { Toolbar, Grid, Button, Box, Typography, AppBar, Container, CssBaseline } from "@mui/material";
+import useStyles from './styles';
 
 const Navbar = () => {
+    const classes = useStyles();
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -25,10 +27,10 @@ const Navbar = () => {
     }, [location]); //updaterar setUser när location ändras
 
     return (
-        <AppBar>
-            <Box sx={{ p: 1 }}>
-                <Typography>Login</Typography>
-            <Toolbar>
+
+            <Box className={classes.box} mb={3}>
+                <Typography variant="h5">Desk booking</Typography>
+
                 {user ? (
                     <div>
                         <Typography>Welcome {user.result.name}</Typography>
@@ -39,10 +41,10 @@ const Navbar = () => {
                         <Button component={Link} to="/auth" variant="contained">Sign in</Button>
                     </div>
                 )}
-            </Toolbar>
+ 
             </Box>
             
-        </AppBar>   
+      
     );
 };
 

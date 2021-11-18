@@ -53,12 +53,12 @@ const App = () => {
             <BrowserRouter>
               <Container className={classes.root}>
                 <Navbar />
-                <div style={{marginTop: 150}}> 
+               
                   <Routes>
                     <Route exact path='/' element={<Home />} />
                     <Route exact path='/Auth' element={<Auth />} />
                   </Routes>      
-                </div>
+            
               </Container> 
             </BrowserRouter>         
             </ThemeProvider>
