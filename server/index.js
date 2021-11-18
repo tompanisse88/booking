@@ -17,7 +17,14 @@ app.use('/users', userRoutes);
 const PORT = process.env.PORT || 5000;
 const dbURI = 'mongodb+srv://tompanisse:tompanisse@deskbookingdb.lnn2w.mongodb.net/DeskDB?retryWrites=true&w=majority';
 
-mongoose.connect(dbURI);
+mongoose.connect(process.env.MONGODB_URI || dbURI, {
+  useNewUrlParser: true
+});
+
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static('./client/build'))
+}
+
 mongoose.connection.once("open", function(){
   app.listen(PORT, () => console.log("listening on port: " + PORT));
 }).on("error", function(error){
