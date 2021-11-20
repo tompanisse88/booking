@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 
-import { Toolbar, Grid, Button, Box, Typography, AppBar, Container, CssBaseline } from "@mui/material";
+import { Grid } from "@mui/material";
 
 import { getPosts } from "../../actions/posts"
 import Posts from "../posts/Posts";
-import Form from "../form/Form";
+//import Form from "../form/Form";
 
 const Home = () => {
 

@@ -34,7 +34,7 @@ export const updatePost = (id, post) => async (dispatch) => {
 }
 
 export const deletePost = (id, currentUser, postUser) => async (dispatch) => {
-    if( currentUser == postUser) {
+    if( currentUser === postUser) {
         try {
                 await api.deletePost(id);
                 dispatch( {type: 'DELETE', payload: id });

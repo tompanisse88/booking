@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 
-import { Toolbar, Grid, Button, Box, Typography, AppBar, Container, CssBaseline } from "@mui/material";
+import { Button, Box, Typography } from "@mui/material";
 import useStyles from './styles';
 
 const Navbar = () => {

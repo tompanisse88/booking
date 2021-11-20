@@ -60,7 +60,7 @@ const Post = ({ post, isBooked, currentUser }) => {
                     type="submit"
                     fullWidth
                     variant="contained"
-                    disabled={!currentUser || post?.user != null || isBooked} // disable if user is not signed in or teh desk is already taken.
+                    disabled={!currentUser || post?.user !== null || isBooked} // disable if user is not signed in or teh desk is already taken.
                     ><AccessTimeFilledIcon /> BOOK</Button>
                 </Box>
                 </form>
@@ -71,7 +71,7 @@ const Post = ({ post, isBooked, currentUser }) => {
                     <Button 
                     className={classes.button} 
                     color="secondary"
-                    disabled={!currentUser || currentUser.result.name != post.user} 
+                    disabled={!currentUser || currentUser.result.name !== post.user} 
                     variant="contained"
                     type="submit"
                     fullWidth

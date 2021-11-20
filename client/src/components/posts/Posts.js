@@ -3,17 +3,17 @@ import { Grid } from '@material-ui/core';
 import { useSelector } from "react-redux";
 
 import Post from "./post/post";
-import useStyles from './styles';
+//import useStyles from './styles';
 
 const Posts = () => {
-    const classes = useStyles();
+    //const classes = useStyles();
     let isBooked = false;
     const currentUser = JSON.parse(localStorage.getItem('profile'));
     const posts = useSelector((state) => state.posts);
 
     if(currentUser != null) {
        posts.forEach(post => {
-        if(post.user == currentUser.result.name) {
+        if(post.user === currentUser.result.name) {
             isBooked = true;
         }
     }); 

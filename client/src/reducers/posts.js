@@ -11,7 +11,7 @@ const posts = (state = [], action) => {
             //console.log("actionpayload:::::");
             //console.log(action.payload);
             //return [...state, action.payload];
-            return state.map( (post) => post.deskID == action.payload.deskID ? action.payload : post )
+            return state.map( (post) => post.deskID === action.payload.deskID ? action.payload : post )
         case 'DELETE':
             return state //.filter((post) => post._id != action.payload);
         default:

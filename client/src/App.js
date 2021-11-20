@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Container, MuiCssBaseline, darkScrollbar, CssBaseline } from "@mui/material";
+import { Container, CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { lightGreen } from '@mui/material/colors';
 
 import Navbar from "./components/Navbar/Navbar";
 import Auth from "./components/Auth/Auth";

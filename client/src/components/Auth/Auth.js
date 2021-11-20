@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 
-import { Box, Avatar, Button, Paper, Container, Grid, Typography, TextField } from "@mui/material";
+import { Box, Avatar, Button, Paper, Container, Grid, Typography } from "@mui/material";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Divider from '@mui/material/Divider';
 
@@ -13,7 +13,7 @@ import { signin, signup} from "../../actions/auth";
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
 const Auth = () => { 
-    const state = null;
+ 
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [isSignup, setIsSignup] = useState(false);

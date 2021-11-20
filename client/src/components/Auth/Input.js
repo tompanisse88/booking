@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextField, Grid, InputAdornment, IconButton, Icon } from '@mui/material';
+import { TextField, Grid, InputAdornment, IconButton } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 const Input = ({name, handleChange, label, half, autoFocus, type, handleShowPassword}) => {
@@ -14,11 +14,11 @@ const Input = ({name, handleChange, label, half, autoFocus, type, handleShowPass
                 label={label}
                 autoFocus={autoFocus}
                 type={type}
-                InputProps={name == 'password' ? {
+                InputProps={name === 'password' ? {
                     endadornment: (   // DETTA FUNKAR INTE SOM DET SKA! toggle knapp för att visa/dölja lösenordet.
                         <InputAdornment position="end">
                             <IconButton onClick={handleShowPassword}>
-                                {type=="password" ? <Visibility /> : <VisibilityOff /> }
+                                {type === "password" ? <Visibility /> : <VisibilityOff /> }
                             </IconButton>
                         </InputAdornment>
                     ),
