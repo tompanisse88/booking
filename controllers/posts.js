@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import Desk from "./models/postMessage.js";
-import Booking from "./models/bookings.js";
+import Desk from "../models/postMessage.js";
+import Booking from "../models/bookings.js";
 
 export const getPost = async (req, res) => {
     try {
