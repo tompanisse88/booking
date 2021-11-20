@@ -6,9 +6,9 @@
   },
   "description": "",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node start index.js",
     "test": "echo 'Error: no test specified' && exit 1",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
